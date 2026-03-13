@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/constants/colors.dart';
+import 'core/constants/strings.dart';
 import 'screens/column_screen.dart';
 import 'screens/listview_static_screen.dart';
 import 'screens/listview_builder_screen.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'List Comparison',
+      title: AppStrings.appTitle,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: lightColorScheme,
@@ -35,20 +36,31 @@ class ComparisonHome extends StatefulWidget {
 class _ComparisonHomeState extends State<ComparisonHome> {
   int _selectedIndex = 0;
   final int _itemCount = 1000;
-  String _buildTime = 'Measuring...';
+  String _buildTime = AppStrings.measuring;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('List Performance'),
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/images/logo.png',
+              height: 60,
+              errorBuilder: (context, error, stackTrace) {
+                return const Icon(Icons.broken_image);
+              },
+            ),
+            const Text(AppStrings.appBarTitle),
+          ],
+        ),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
             onPressed: () {
               setState(() {
-                _buildTime = 'Measuring...';
+                _buildTime = AppStrings.measuring;
               });
             },
           ),
@@ -58,16 +70,16 @@ class _ComparisonHomeState extends State<ComparisonHome> {
         children: [
           Container(
             width: double.infinity,
-            color: Colors.blue.withOpacity(0.1),
+            color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3),
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
                 Text(
-                  'Build Time: $_buildTime',
-                  style: const TextStyle(
+                  '${AppStrings.buildTimeLabel}$_buildTime',
+                  style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blue,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
               ],
@@ -80,24 +92,25 @@ class _ComparisonHomeState extends State<ComparisonHome> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
+        selectedItemColor: Theme.of(context).colorScheme.primary,
         onTap: (index) {
           setState(() {
             _selectedIndex = index;
-            _buildTime = 'Measuring...';
+            _buildTime = AppStrings.measuring;
           });
         },
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.unfold_more),
-            label: 'Column',
+            label: AppStrings.navColumn,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
-            label: 'ListView',
+            label: AppStrings.navListView,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.build),
-            label: 'Builder',
+            label: AppStrings.navBuilder,
           ),
         ],
       ),
@@ -126,7 +139,7 @@ class _ComparisonHomeState extends State<ComparisonHome> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) {
         stopwatch.stop();
-        final time = '${stopwatch.elapsedMilliseconds} ms';
+        final time = '${stopwatch.elapsedMilliseconds}${AppStrings.msUnit}';
         if (_buildTime != time) {
           setState(() {
             _buildTime = time;
