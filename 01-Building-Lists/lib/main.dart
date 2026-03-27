@@ -47,7 +47,7 @@ class _ComparisonHomeState extends State<ComparisonHome> {
             Image.asset(
               'assets/images/logo.png',
               height: 60,
-              errorBuilder: (context, error, stackTrace) {
+              errorBuilder: (context, error, stackTrace){
                 return const Icon(Icons.broken_image);
               },
             ),
