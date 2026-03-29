@@ -1,6 +1,6 @@
 # Flutter-Under-the-Hood series
 
-![logo.png](./logo.png)
+<img src="./logo.png" width="300" alt="">
 
 ## 📬 التواصل (Contact)
 
