@@ -75,3 +75,7 @@ If you're looking for an engineer who values clarity, performance, and long-term
 *********************************<br><br>
 
 3. Keys vs No Keys<br>
+
+*********************************<br><br>
+
+3. Getx vs Provider<br>
