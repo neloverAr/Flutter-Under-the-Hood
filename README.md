@@ -78,8 +78,12 @@ If you're looking for an engineer who values clarity, performance, and long-term
 
 *********************************<br><br>
 
-3. Getx vs Provider<br>
+4. Getx vs Provider<br>
 
 *********************************<br><br>
 
-4. Using setState with State Management<br>
+5. Using setState with State Management<br>
+
+*********************************<br><br>
+
+6. getStorage vs SharedPreferences<br><br>
