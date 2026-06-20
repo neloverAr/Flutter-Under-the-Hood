@@ -12,12 +12,6 @@ Email: neloverar@gmail.com<br><br>
 إذا كنت مطور Flutter في غزة تهتم بكتابة كود نظيف (Clean Code)، يسعدني تواصلك عبر البريد الإلكتروني من خلال إرسال كلمة "رقم"، وسأكون سعيدة بالدردشة معك.<br><br>
 إذا كنت تبحث عن تطوير تطبيق قادر على المنافسة في عالم الذكاء الاصطناعي، يمكنك التواصل لمناقشة التفاصيل.<br><br>
 
-إذا كنت طالبًا مهتمًا بالتعمق في تطوير التطبيقات باستخدام Flutter، سأبدأ قريبًا دورة تدريبية، وسنقوم بأشياء رائعة معًا.<br>
-يمكنك التسجيل من خلال النموذج التالي:<br>
-https://forms.gle/RWKdAujXqR3uujnX8<br><br>
-
-مجرد تفكيرك بالانضمام خطوة رائعة 👏<br><br>
-
 تابعني على لينكدإن:<br>
 https://www.linkedin.com/in/nelover-aburas/<br><br>
 
@@ -87,3 +81,7 @@ If you're looking for an engineer who values clarity, performance, and long-term
 *********************************<br><br>
 
 6. getStorage vs SharedPreferences<br><br>
+
+*********************************<br><br>
+
+7. Rule of Layout<br><br>
